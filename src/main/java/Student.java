@@ -4,12 +4,14 @@ public class Student {
     private Long RollNo;
     private Integer marks;
     private String country;
+    private  StudentGender studentGender;
 
-    public Student(String name, Long rollNo, Integer marks, String country) {
+    public Student(String name, Long rollNo, Integer marks, String country,StudentGender studentGender) {
         this.name = name;
         RollNo = rollNo;
         this.marks = marks;
         this.country = country;
+        this.studentGender = studentGender;
     }
 
     public String getName() {
@@ -44,5 +46,23 @@ public class Student {
         this.country = country;
     }
 
+    public StudentGender getStudentGender() {
+        return studentGender;
+    }
 
+    public void setStudentGender(StudentGender studentGender) {
+        this.studentGender = studentGender;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", RollNo=" + RollNo +
+                ", marks=" + marks +
+                ", country='" + country + '\'' +
+                ", studentGender=" + studentGender +
+                "}\n";
+
+    }
 }
